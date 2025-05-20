@@ -1,0 +1,9 @@
+<partida>         ::= { <turno> }
+<turno>           ::= <numero_turno> "." <jugada_blanca> [<jugada_negra>]
+<jugada>          ::= <enroque> | <movimiento_pieza> | <movimiento_peon>
+<enroque>         ::= "O-O" | "O-O-O"
+<movimiento_pieza>::= <pieza> <desambiguacion>? <captura>? <casilla> <promocion>? <jaque_mate>?
+<movimiento_peon> ::= <peon_captura> | <peon_avance>
+<peon_avance>     ::= <casilla> <promocion>? <jaque_mate>?
+<peon_captura>    ::= <letra> "x" <casilla> <promocion>? <jaque_mate>?
+...  (igual que la gramática que ya conoces)
